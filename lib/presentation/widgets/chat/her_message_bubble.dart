@@ -35,7 +35,6 @@ class HerMessageBubble extends StatelessWidget {
 
 class _ImageBubble extends StatelessWidget {
   final String? imageUrl;
-
   const _ImageBubble({super.key, this.imageUrl});
 
   @override
@@ -44,7 +43,7 @@ class _ImageBubble extends StatelessWidget {
     return ClipRRect(
       borderRadius: BorderRadius.circular(20),
       child: Image.network(
-        "$imageUrl",
+        imageUrl ?? "",
         width: size.width * 0.6,
         height: 150,
         fit: BoxFit.cover,

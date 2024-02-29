@@ -9,7 +9,11 @@ class ChatProvider extends ChangeNotifier {
   List<Message> messageList = [
     const Message(text: 'Hola, mi amor!', fromWho: FromWho.me),
     const Message(text: 'Ya regresaste del trabajo?', fromWho: FromWho.me),
-    const Message(text: 'Sí, ya regresé', fromWho: FromWho.hers)
+    const Message(
+        text: 'Sí, ya regresé',
+        fromWho: FromWho.hers,
+        imageUrl:
+            "https://yesno.wtf/assets/no/27-8befe9bcaeb66f865dd3ecdcf8821f51.gif")
   ];
 
   Future<void> sendMessage(String text) async {
